@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExcuseAI - AI Excuse Autocomplete</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-icon">
+                <i class="fas fa-brain"></i>
+                <i class="fas fa-sparkles sparkle"></i>
+            </div>
+            <h1 class="title">ExcuseAI</h1>
+            <p class="subtitle">
+                Your AI-powered excuse assistant. Start typing and let artificial intelligence help you craft the perfect excuse for any situation.
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Excuse Autocomplete Section -->
+            <div class="autocomplete-section">
+                <div class="input-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <textarea 
+                        id="excuseInput" 
+                        placeholder="Start typing your excuse... (e.g., 'I'm sorry I'm late because')"
+                        rows="4"
+                    ></textarea>
+                    
+                    <div id="suggestions" class="suggestions-container hidden"></div>
+                </div>
+
+                <div id="inputActions" class="input-actions hidden">
+                    <button id="copyBtn" class="btn btn-primary">
+                        <i class="fas fa-copy"></i>
+                        Copy Excuse
+                    </button>
+                    <button id="saveBtn" class="btn btn-secondary">
+                        <i class="fas fa-star"></i>
+                        Save Excuse
+                    </button>
+                </div>
+            </div>
+
+            <!-- Random Generator Section -->
+            <div class="generator-section">
+                <h2 class="section-title">Random Excuse Generator</h2>
+                
+                <div class="category-selector">
+                    <label for="categorySelect">Choose Category:</label>
+                    <select id="categorySelect">
+                        <option value="all">All Categories</option>
+                        <option value="work">Work</option>
+                        <option value="social">Social</option>
+                        <option value="family">Family</option>
+                        <option value="school">School</option>
+                        <option value="health">Health</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="technology">Technology</option>
+                        <option value="general">General</option>
+                    </select>
+                </div>
+
+                <div class="generator-controls">
+                    <button id="generateBtn" class="btn btn-gradient">
+                        <i class="fas fa-random"></i>
+                        Generate Random Excuse
+                    </button>
+                </div>
+
+                <div id="generatedExcuse" class="generated-excuse hidden">
+                    <p id="excuseText"></p>
+                    <button id="copyGeneratedBtn" class="btn btn-success">
+                        <i class="fas fa-copy"></i>
+                        Copy Excuse
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">
+                Made with <i class="fas fa-heart"></i> for procrastinators worldwide
+            </p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="#" class="footer-link">
+                    <i class="fas fa-coffee"></i>
+                    Buy me a coffee
+                </a>
+            </div>
+            <p class="copyright">
+                © 2025 ExcuseAI. All rights reserved. Use responsibly! 😉
+            </p>
+        </footer>
+    </div>
+
+    <script src="excuses-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
